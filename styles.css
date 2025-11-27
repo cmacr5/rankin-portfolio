@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", serif;
+}
 /* Main Banner Styling */
 .header {
     min-height: 100vh;
@@ -120,8 +121,8 @@ nav .fa{
     .nav-links ul li{
         display: block;
     }
-    .nav-links ul li{
-        position: absolute
+    .nav-links{
+        position: absolute;
         background: #f44336;
         height: 100vh;
         width: 200px;
@@ -164,7 +165,7 @@ p{
 }
 .row{
     margin-top: 5%;
-    display: Flex;
+    display: flex;
     justify-content: space-between;
 }
 .course-col{
@@ -261,11 +262,11 @@ h3{
     margin-bottom: 5%;
     text-align: left;
 }
-facilities-col img{
+.facilities-col img{
     width: 100%;
     border-radius: 10px;
 }
-facilities-col p{
+.facilities-col p{
     padding: 0;
 }
 .facilities-col h3{
@@ -286,7 +287,7 @@ facilities-col p{
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: left;
-    background: #ff3f3;
+    background: #fff3f3;
     padding: 25px;
     cursor: pointer;
     display: flex;
@@ -305,18 +306,20 @@ facilities-col p{
     text-align: left;
 }
 .testimonial-col .fa{
-color: #f44336;
+    color: #f44336;
 }
 @media(max-width: 700px){
-    margin-left: 0px;
-    margin-right: 15px;
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
 }
 
 /*------ Call to Action ------*/
 .cta{
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),(rgba(0,0,0,0.7)), url(Images/banner2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Images/banner2.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -349,10 +352,39 @@ color: #f44336;
 .icons .fa{
     color: #f44336;
     margin: 0 13px;
-    Cursor: pointer;
+    cursor: pointer;
     padding: 18px 0;
 }
 
 .fa-heart-o{
     color: #f44336; 
+}
+/*------ Video Section ------*/
+.video-section{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.video-container{
+    margin-top: 50px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
